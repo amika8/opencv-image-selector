@@ -66,26 +66,8 @@ int main() {
         return-1;
     }
 
-    /**
-    //POUR LOUVERTURE DES IMAGES :
-    vector<Mat> images;
-    Mat horizontalStack;
-    size_t count = fnImages.size(); //number of png files in images folder
-    for (int i = 0; i < count; i++) {
-        images.push_back(imread(fnImages[i]));
-        hconcat(images[i], images.size(), horizontalStack);
-
-    }
-    vector<String> fnImages;
-    glob("/*.png", fnImages, false);
-
-
-    vector<Mat> imagesArray = concatImages(fnImages);
-    **/
-
-
     try {
-        string basePath = "C:\\Users\\Ce PC\\source\\repos\\OpenCvVisionneuse\\OpenCvVisionneuse\\images\\";
+        string basePath = "/images"; //YOU MIGHT HAVE TO CHANGE THE PATH !
         vector<string> imgs = { "image1.jpg", "image2.jpg", "image3.jpg", "image4.jpg", "image5.jpg", "image6.jpg" };
 
         vector<Mat> smallImagesArray = sliderImages(imgs, basePath, 0);
